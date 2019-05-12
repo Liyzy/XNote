@@ -1,0 +1,61 @@
+<!--pages/found/found.wxml-->
+<view class="header">
+  <view class="title">
+    <text>{{year}}年</text>
+    <text>未完成</text>
+    <text>已完成</text>
+  </view>
+  <view class="content">
+    <view class="date">
+      <text class="biggertext">{{month}}</text>
+      <text class="normal">月</text>
+      <text class="biggertext">{{day}}</text>
+      <text class="normal">日</text>
+    </view>
+    <view class="counter1">
+      <text class="biggertext">{{uncompletedPlans}}</text>
+    </view>
+    <view class="counter2">
+      <text class="biggertext">{{completedPlans}}</text>
+    </view>
+  </view>
+</view>
+
+
+<view wx:if="{{uncompletedPlans > 0}}" class="encouragetext-wrapper"><text class="encouragetext">还剩这些了，加油💪</text></view>
+<view wx:if="{{uncompletedPlans > 0}}" class="display-plan">
+  <!-- 展示未完成计划 -->
+  <block wx:if='{{plans.length}}'>
+    <!-- 列表循环 -->
+    <view wx:for="{{plans}}" wx:for-item="node" wx:for-index="index" wx:key="{{index}}">
+      <!-- 未完成的任务展示效果 -->
+      <block wx:if="{{!node.complete}}">
+        <view class="one-plan-wrapper">
+          <view bindtap="changePlanStatus" data-index='{{index}}'>
+            <image class="icon-uncompleted" src="../../images/uncomplete.png"></image>
+          </view>
+          <text class='plan'>{{node.text}}</text>
+        </view>
+      </block>
+    </view>
+  </block>
+</view>
+
+<view wx:if="{{completedPlans > 0}}" class="encouragetext-wrapper"><text class="encouragetext">已经完成这么多了哦💗</text></view>
+<view wx:if="{{completedPlans > 0}}" class="display-plan">
+  <!-- 展示已完成计划 -->
+  <block wx:if='{{plans.length}}'>
+    <!-- 列表循环 -->
+    <view wx:for="{{plans}}" wx:for-item="node" wx:for-index="index" wx:key="{{index}}">
+      <!-- 完成的任务展示效果 -->
+      <block wx:if="{{node.complete}}">
+        <view class="one-plan-wrapper">
+          <view bindtap="changePlanStatus" data-index='{{index}}'>
+            <image class="icon-completed" src="../../images/complete.png"></image>
+          </view>
+          <text class='completed-plan'>{{node.text}}</text>
+        </view>
+      </block>
+    </view>
+  </block>
+</view>

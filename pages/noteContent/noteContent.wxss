@@ -1,0 +1,51 @@
+/* pages/noteContent/noteContent.wxss */
+.title-wrapper {
+  width: 100%;
+  height: 50rpx;
+  text-align: center;
+}
+
+.title {
+  font-size: 30rpx;
+  font: bold;
+}
+
+.node-wrapper{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.node-wrapper text{
+  font-size: 25rpx;
+}
+
+.node-wrapper image{
+  width: 100%;
+  height: 100%;
+}
+
+.delete-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50rpx;
+}
+
+.edit-again-btn {
+  display: flex;
+  width: 50%;
+  height: 80rpx;
+  background: #00FF00;
+  border-radius: 10rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn {
+  display: flex;
+  width: 50%;
+  height: 80rpx;
+  background: #ff6666;
+  border-radius: 10rpx;
+  align-items: center;
+  justify-content: center;
+}

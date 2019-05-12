@@ -1,0 +1,25 @@
+<!--pages/notes/notes.wxml-->
+<view class="main-wrapper">
+  <!-- 文章标题的展示 -->
+  <block wx:if='{{noteInfo.length}}'>
+    <block wx:for='{{noteInfo}}' wx:for-item='note' wx:for-index='index' wx:key='{{index}}'>
+      <view class="noteListNode" bindtap='getNoteContent' data-index='{{index}}'>
+        <view class="icon-attachment">
+          <image class="icon-attachment" src="../../images/attachment.png"></image>
+        </view>
+        <view class="note-title">
+          <text>{{note.title}}</text>
+        </view>
+        <view class="note-date">
+          <text>{{note.date}}</text>
+        </view>
+      </view>
+    </block>
+    <view class="info-text-wrapper"><text class="info-text">共有{{noteInfo.length}}篇文章</text></view>
+  </block>
+  <block wx:else>
+    <view class="empty-text-wrapper">
+      <text class="empty-text">空空如也~</text>
+    </view>
+  </block>
+</view>

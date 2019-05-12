@@ -1,0 +1,9 @@
+<!--pages/about/about.wxml-->
+<view class="main-wrapper">
+  <text class="authorInfo">该小程序由Ahhhh开发</text>
+  <image class="authorImage" src="../../images/author.jpg"></image>
+  <text class="programInfo">感谢“美篇”提供图文混编灵感</text>
+  <image class="icon-meipian" src="../../images/meipian.png"></image>
+  <text class="programInfo">感谢阿里矢量图标库提供矢量图标</text>
+  <image class="icon-iconfont" src="../../images/iconfont.png"></image>
+</view>

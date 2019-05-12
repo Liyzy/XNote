@@ -1,0 +1,60 @@
+/* pages/notes/notes.wxss */
+.noteListNode {
+  height: 80rpx;
+  border-radius: 5rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  border-bottom: solid 1rpx #8a8a8a;
+}
+
+.icon-attachment {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 17rpx;
+  top: 15rpx;
+}
+
+.note-title {
+  position: absolute;
+  left: 70rpx;
+}
+
+.note-title text {
+  font-size: 28rpx;
+  color: black;
+}
+
+.note-date {
+  position: absolute;
+  right: 40rpx;
+}
+.note-date text {
+  font-size: 18rpx;
+  color: #8a8a8a;
+}
+
+.empty-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 800rpx;
+}
+
+.empty-text {
+  color: #8a8a8a;
+  font-size: 70rpx;
+}
+
+.info-text-wrapper {
+  position: absolute;
+  right: 40rpx;
+}
+
+.info-text {
+  color: #8a8a8a;
+  font-size: 25rpx;
+}

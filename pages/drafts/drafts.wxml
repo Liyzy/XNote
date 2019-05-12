@@ -1,0 +1,25 @@
+<!--pages/drafts/drafts.wxml-->
+<view class="main-wrapper">
+  <!-- 草稿标题的展示 -->
+  <block wx:if='{{draftInfo.length}}'>
+    <block wx:for='{{draftInfo}}' wx:for-item='draft' wx:for-index='index' wx:key='{{index}}'>
+      <view class="draftListNode" bindtap='getdraftContent' data-index='{{index}}'>
+        <view class="icon-attachment">
+          <image class="icon-attachment" src="../../images/draft.png"></image>
+        </view>
+        <view class="draft-title">
+          <text>{{draft.title}}</text>
+        </view>
+        <view class="draft-date">
+          <text>{{draft.date}}</text>
+        </view>
+      </view>
+    </block>
+    <view class="info-text-wrapper"><text class="info-text">共有{{draftInfo.length}}篇草稿</text></view>
+  </block>
+  <block wx:else>
+    <view class="empty-text-wrapper">
+      <text class="empty-text">空空如也~</text>
+    </view>
+  </block>
+</view>

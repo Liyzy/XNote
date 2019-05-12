@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/myPage/myPage",
+    "pages/found/found",
+    "pages/newNote/newNote",
+    "pages/newPlan/newPlan",
+    "pages/notes/notes",
+    "pages/noteContent/noteContent",
+    "pages/drafts/drafts",
+    "pages/draftContent/draftContent",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FF6666",
+    "navigationBarTitleText": "XNote",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#ff6666",
+    "list": [
+      {
+        "pagePath": "pages/found/found",
+        "iconPath": "images/tabBar-found.png",
+        "selectedIconPath": "images/tabBar-found-selected.png",
+        "text": "计划"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabBar-edit.png",
+        "selectedIconPath": "images/tabBar-edit-selected.png",
+        "text": "新建"
+      },
+      {
+        "pagePath": "pages/myPage/myPage",
+        "iconPath": "images/tabBar-my.png",
+        "selectedIconPath": "images/tabBar-my-selected.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

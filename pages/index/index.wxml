@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="slideImg">
+  <swiper 
+    indicator-dots="ture" 
+    autoplay="true" 
+    interval="3000"
+    duration="500"
+    indicator-color="#8B658B"
+    indicator-active-color="#FFD700"
+  >
+    <swiper-item>
+      <image class="slide-image" src="../../images/head1.jpg" />
+    </swiper-item>
+    <swiper-item>
+      <image class="slide-image" src="../../images/head2.jpg" />
+    </swiper-item>
+    <swiper-item>
+      <image class="slide-image" src="../../images/head3.jpg" />
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="newTypeList">
+  <button id="newTypeList1" bindtap="newNote">新建笔记</button>
+  <button id="newTypeList2" bindtap="newPlan">每日计划</button>
+</view>

@@ -1,0 +1,94 @@
+/* pages/newPlan/newPlan.wxss */
+page {
+  margin-bottom: 20rpx;
+}
+.edit-plan {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: solid #ff6666 2rpx;
+  margin: 50rpx 30rpx 50rpx 30rpx;
+  border-radius: 20rpx;
+}
+
+.icon-plus {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.plan-editor {
+  width: 610rpx;
+  margin-left: 10rpx;
+}
+
+.display-plan {
+  display: flex;
+  flex-direction: column;
+  margin: 50rpx 30rpx 0rpx 30rpx;
+  border: 2rpx solid rgb(173, 173, 173);
+  border-radius: 20rpx;
+  box-shadow: -5rpx -5rpx 3rpx #d8d8d8;
+}
+
+.one-plan-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: solid gray 1rpx;
+  height: 80rpx;
+}
+
+.icon-uncompleted {
+  margin: 10rpx 10rpx 0rpx 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.icon-completed {
+  margin: 10rpx 10rpx 0rpx 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.plan {
+  width: 570rpx;
+  color: #8a8a8a;
+  font-size: 37rpx;
+}
+
+.completed-plan {
+  text-decoration:line-through #ff6666;
+  width: 570rpx;
+  color: #8a8a8a;
+  font-size: 37rpx;
+}
+
+.icon-delete {
+  margin-top: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.tiptext-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 800rpx;
+}
+
+.tiptext {
+  color: #8a8a8a;
+  text-align: center;
+  font-size: 70rpx;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0rpx 30rpx 0rpx 30rpx;
+  padding: 0 10rpx;
+  font-size: 26rpx;
+  color: #8a8a8a;
+}
+

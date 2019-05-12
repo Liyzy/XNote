@@ -1,0 +1,30 @@
+/* pages/about/about.wxss */
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 100rpx;
+}
+
+.authorImage {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  margin-top: 20rpx;
+  margin-bottom: 100rpx;
+}
+
+.icon-meipian {
+  width: 300rpx;
+  height: 120rpx;
+  margin-top: 20rpx;
+  margin-bottom: 100rpx;
+}
+
+.icon-iconfont {
+  width: 170rpx;
+  height: 170rpx;
+  margin-top: 20rpx;
+}

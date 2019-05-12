@@ -1,0 +1,89 @@
+/* pages/found/found.wxss */
+.header {
+  height: 100rpx;
+  background: #ff6666;
+}
+
+.title text{
+  font-size: 25rpx;
+  color: rgb(19, 18, 18);
+  margin-right: 100rpx;
+  margin-left: 50rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.date {
+  margin-left: 50rpx; 
+}
+
+.counter1 {
+  margin-left: 145rpx;
+}
+
+.counter2 {
+  margin-left: 200rpx;
+}
+
+.biggertext {
+  font-size: 37rpx;
+  color: yellow;
+}
+
+.normal {
+  font-size: 25rpx;
+}
+
+.display-plan {
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx 30rpx 0rpx 30rpx;
+  border: 2rpx solid rgb(173, 173, 173);
+  border-radius: 20rpx;
+  box-shadow: -5rpx -5rpx 3rpx #d8d8d8;
+}
+
+.one-plan-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: solid gray 1rpx;
+  height: 80rpx;
+}
+
+.icon-uncompleted {
+  margin: 10rpx 10rpx 0rpx 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.icon-completed {
+  margin: 10rpx 10rpx 0rpx 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.plan {
+  width: 570rpx;
+  color: #8a8a8a;
+  font-size: 37rpx;
+}
+
+.completed-plan {
+  text-decoration:line-through #ff6666;
+  width: 570rpx;
+  color: #8a8a8a;
+  font-size: 37rpx;
+}
+
+.encouragetext-wrapper {
+  margin-top: 30rpx;
+}
+
+.encouragetext {
+  font-size: 30rpx;
+  margin-left: 30rpx;
+}

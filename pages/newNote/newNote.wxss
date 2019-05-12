@@ -1,0 +1,121 @@
+/* pages/newNote/newNote.wxss */
+
+.edit-title input {
+  text-align: center;
+  font-size: 45rpx;
+  font-style: bold;
+  border: 1px solid #e4e7ed;
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+}
+
+.editor-wrapper {
+  position: relative;
+  padding: 10rpx 30rpx;
+  margin-bottom: 100rpx;
+  z-index: 1;
+}
+
+.editor-add-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 200rpx;
+  height: 95rpx;
+  margin: 0 auto;
+}
+
+.add-content-view {
+  position: relative;
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.icon-text {
+  position: absolute;
+  left: 0rpx;
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.icon-image {
+  position: absolute;
+  left: 0rpx;
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.editor-node-wrapper {
+  position: relative;
+  width: 700rpx;
+  margin: 0 auto;
+}
+
+.editor-textarea {
+  position: relative;
+  display: block;
+  width: 656rpx;
+  border: solid 2rpx #e4e7ed;
+  background: #fff;
+  padding: 20rpx;
+  min-height: 2.5em;
+  font-size: 30rpx;
+}
+
+.editor-image {
+  display: block;
+  width: 700rpx;
+}
+
+.icon-close {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  top: -18rpx;
+  left: -18rpx;
+}
+
+.icon-up {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  top: -18rpx;
+  right: -18rpx;
+}
+
+.icon-down {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  bottom: -18rpx;
+  right: -18rpx;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+}
+
+.editor-submit-btn {
+  width: 49.99%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  background-color: #FF6666;
+  color: black;
+  z-index: 10;
+}
+
+.save-as-draft-btn {
+  width: 49.99%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0rpx;
+  right: 0rpx;
+  background-color: #FF6666;
+  color: black;
+  z-index: 10;
+}

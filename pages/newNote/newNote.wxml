@@ -1,0 +1,48 @@
+<!--pages/newNote/newNote.wxml-->
+<!-- 设置标题 -->
+<view class='edit-title'>
+  <input placeholder='点击设置标题' placeholder-style='color:grey' maxlength='50' confirm-type='完成' bindinput='setTitle' value='{{title}}'></input>
+</view>
+<view class="editor-wrapper" style="min-height: {{windowHeight}}px" scroll-y enable-back-to-top>
+  <!-- 初始（添加文本 添加图片） 按钮 -->
+  <view class="editor-add-wrapper">
+    <view class='add-content-view' data-index="-1" bindtap="addTextNode">
+      <image class='icon-text' src='../../images/text.png'></image>
+    </view>
+    <view class='add-content-view' data-index="-1" bindtap="addImageNode">
+      <image class='icon-image' src='../../images/image.png'></image>
+    </view>
+  </view>
+  <!-- 展示所有nodeList里的节点 -->
+  <block wx:for="{{nodeList}}" wx:for-item="node" wx:for-index="index" wx:key="{{index}}">
+    <view class="editor-node-wrapper">
+      <!-- 文本展示方法 -->
+      <block wx:if="{{node.name === 'p'}}">
+        <textarea class="editor-textarea" value="{{node.children[0].text}}" auto-height='{{true}}' maxlength="-1" data-index="{{index}}" bindinput="onTextareaInput">
+        </textarea>
+      </block>
+      <!-- 图片展示方法 -->
+      <block wx:if="{{node.name === 'image'}}">
+        <image class="editor-image" src="{{node.attrs.src}}" style="height: {{node.attrs._height * 700}}rpx"></image>
+      </block>
+      <!-- 每个节点上的功能按钮：删除、上移、下移 -->
+      <image class="icon-close" src='../../images/close.png' data-index="{{index}}" bindtap="deleteNode"></image>
+      <image class="icon-up" src='../../images/up.png' data-index="{{index}}" bindtap="currentNodeUp"></image>
+      <image class="icon-down" src='../../images/down.png' data-index="{{index}}" bindtap="currentNodeDown"></image>
+    </view>
+    <!-- 添加文本 & 添加图片 -->
+    <view class="editor-add-wrapper">
+      <view class='add-content-view' data-index="{{index}}" bindtap="addTextNode">
+        <image class='icon-text' src='../../images/text.png'></image>
+      </view>
+      <view class='add-content-view' data-index="{{index}}" bindtap="addImageNode">
+        <image class='icon-image' src='../../images/image.png'></image>
+      </view>
+    </view>
+  </block>
+</view>
+<!-- 完成按钮 & 保存为草稿按钮 -->
+<view class='btn-wrapper'>
+  <button class="editor-submit-btn" bindtap="onFinish">完 成</button>
+  <button class="save-as-draft-btn" bindtap="saveAsDraft">保存草稿</button>
+</view>

@@ -1,0 +1,48 @@
+<!--pages/newPlan/newPlan.wxml-->
+<view class="edit-plan">
+  <image src="../../images/plus.png" class="icon-plus"></image>
+  <input class="plan-editor" placeholder='点我新建一条计划吧~' placeholder-style='color:#ff6666' maxlength='50' confirm-type='确定' bindinput='onInputInput' bindconfirm='addPlan' value='{{textBufferedPool}}'></input>
+</view>
+
+<view wx:if='{{nodeList.length}}'>
+  <view class="main-wrapper" style="min-height: {{windowHeight}}px" scroll-y>
+    <view class="display-plan">
+      <!-- 如果有任务，不管是完成还是未完成，进行展示 -->
+      <block wx:if='{{nodeList.length}}'>
+        <!-- 列表循环 -->
+        <view wx:for="{{nodeList}}" wx:for-item="node" wx:for-index="index" wx:key="{{index}}">
+          <!-- 未完成的任务展示效果 -->
+          <block wx:if="{{!node.complete}}">
+            <view class="one-plan-wrapper">
+              <view bindtap="changePlanStatus" data-index='{{index}}'>
+                <image class="icon-uncompleted" src="../../images/uncomplete.png"></image>
+              </view>
+              <text class='plan'>{{node.text}}</text>
+              <view bindtap="deletePlan" data-index='{{index}}'>
+                <image class="icon-delete" src="../../images/delete.png"></image>
+              </view>
+            </view>
+          </block>
+          <!-- 完成的任务展示效果 -->
+          <block wx:else>
+            <view class="one-plan-wrapper">
+              <view bindtap="changePlanStatus" data-index='{{index}}'>
+                <image class="icon-completed" src="../../images/complete.png"></image>
+              </view>
+              <text class='completed-plan'>{{node.text}}</text>
+              <view bindtap="deletePlan" data-index='{{index}}'>
+                <image class="icon-delete" src="../../images/delete.png"></image>
+              </view>
+            </view>
+          </block>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 选项 -->
+  <view class="footer">
+    <text class="option" wx:if="{{ uncompletedCounter > 0 }}" bindtap="completeAllPlan">全部完成</text>
+    <text class="option" wx:if="{{ uncompletedCounter }}">剩余{{ uncompletedCounter }} 项，加油！</text>
+    <text class="option" wx:if="{{ nodeList.length > uncompletedCounter }}" bindtap="clearCompletedPlan">清除已完成</text>
+  </view>
+</view>

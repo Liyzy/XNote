@@ -1,0 +1,20 @@
+<!--pages/noteContent/noteContent.wxml-->
+<view class="note-wrapper">
+  <view class="title-wrapper">
+    <text class="title">{{title}}</text>
+  </view>
+  <block wx:if='{{content[0].length}}'>
+    <view  class="node-wrapper" wx:for="{{content[0]}}" wx:for-item="node" wx:for-index="index" wx:key="{{index}}">
+      <block wx:if="{{node.name === 'p'}}">
+        <text class="paragraph-node">{{node.children[0].text}}</text>
+      </block>
+      <block wx:if="{{node.name === 'image'}}">
+        <image class="image-node" src="{{node.attrs.src}}" style="height: {{node.attrs._height * 700}}rpx"></image>
+      </block>
+    </view>
+  </block>
+  <view class="delete-btn-wrapper">
+    <view class="edit-again-btn" bindtap="editAgain"><text>再次编辑</text></view>
+    <view class="delete-btn" bindtap="deleteNote"><text>删除文章</text></view>
+  </view>
+</view>

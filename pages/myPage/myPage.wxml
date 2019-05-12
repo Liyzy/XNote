@@ -1,0 +1,68 @@
+<!--pages/myPage/myPage.wxml-->
+<view>
+  <!-- 登录情况下 -->
+  <view class="header" wx:if="{{isLogin}}">
+    <!-- 昵称 -->
+    <view class="info-nickname">
+      <text class="nick-name">{{nickname}}</text>
+      <text class="undesigned">不忘初心 方得始终</text>
+    </view>
+    <!-- 头像 -->
+    <view class="img-avatar-wrapper">
+      <image class="img-avatar-login" src="{{avatarSrc}}"></image>
+    </view>
+  </view>
+  <!-- 未登录情况下 -->
+  <view class="header" wx:else>
+    <!-- 提示登陆信息 -->
+    <view class="loginBtn">
+      <button open-type='getUserInfo' bindgetuserinfo='getUserInfo'>点此登录</button>
+    </view>
+    <!-- 未登陆的头像 -->
+    <view class="img-avatar-wrapper">
+      <image class="img-avatar-unlogin" src="{{avatarSrc}}"></image>
+    </view>
+  </view>
+</view>
+
+<view class="catagory-wrapper">
+  <view class="category" bindtap="getMyNotes">
+    <image class="category-icon" src="../../images/notebook.png"></image>
+    <text class="categorytext">我的笔记</text>
+    <image class="icon-right" src="../../images/right.png"></image>
+  </view>
+  <view class="dividingLine"></view>
+ 
+  <view class="category" bindtap="getMydraftsInfo">
+    <image class="category-icon" src="../../images/my-draft.png"></image>
+    <text class="categorytext">我的草稿</text>
+    <image class="icon-right" src="../../images/right.png"></image>
+  </view>
+  <view class="dividingLine"></view>
+  <!-- 跳转到计划页面 -->
+  <view class="category" bindtap="tempFuntion">
+    <image class="category-icon" src="../../images/calendar.png"></image>
+    <text class="categorytext">我的计划</text>
+    <image class="icon-right" src="../../images/right.png"></image>
+  </view>
+  <!-- 这里的bindtap还没写 -->
+  <!-- <view class="dividingLine"></view>
+  <view class="category" bindtap="uncompleted">
+    <image class="category-icon" src="../../images/Bills.png"></image>
+    <text class="categorytext">我的账单</text>
+    <image class="icon-right" src="../../images/right.png"></image>
+  </view> -->
+  <!-- 这里的bindtap还没写 -->
+  <!-- <view class="category" bindtap="uncompleted">
+    <image class="category-icon" src="../../images/Memo.png"></image>
+    <text class="categorytext">我的备忘录</text>
+    <image class="icon-right" src="../../images/right.png"></image>
+  </view> -->
+  <view class="dividingLine"></view>
+  <!-- 关于 -->
+  <view class="category" bindtap="getAbout">
+    <image class="category-icon" src="../../images/about.png"></image>
+    <text class="categorytext">关于XNote</text>
+    <image class="icon-right" src="../../images/right.png"></image>
+  </view>
+</view>
