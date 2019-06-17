@@ -6,6 +6,7 @@ App({
   globalData: {
     appid: 'wxbd3697a62f0b1077', // appid
     secret: '77a010adc5c4ac7851ecfd190f110e21', // 加密密钥
+    // 暴露了。。。已重置
   },
 
   /**
